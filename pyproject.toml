@@ -1,0 +1,13 @@
+[project]
+name = "pyprobe-mcp"
+version = "0.1.0"
+description = "Temporary MCP server that runs Python inside its own process for runtime inspection."
+requires-python = ">=3.11"
+dependencies = [
+    "fastmcp>=4.0,<5",
+]
+
+[tool.uv]
+# Single-file server: Horizon loads server.py directly, so the project itself is
+# not built or installed as a package — only its dependencies are.
+package = false
